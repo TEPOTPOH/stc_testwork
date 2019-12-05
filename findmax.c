@@ -17,7 +17,7 @@
 // in_array[]: input array of float data
 // in_N: num elements in input array
 // in_K: limit value in % 
-// out_presult: pointer on result struct
+// out_list: pointer on result struct
 // return: 0 - OK, 1 - wrong input data
 int find_max(const float in_array[], uint8_t in_N, uint8_t in_K, list8_t* out_list)
 {
@@ -34,7 +34,7 @@ int find_max(const float in_array[], uint8_t in_N, uint8_t in_K, list8_t* out_li
 
 	float max = in_array[0];
 	for (i = 1; i < in_N; ++i)
-   		if (in_array[i] > max) max = in_array[i];	
+   		if (in_array[i] > max) max = in_array[i];
 	
 	out_list->len = 0;
 	float low_limit = max * (float)(100-in_K) / 100.0;
